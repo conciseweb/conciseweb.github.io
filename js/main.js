@@ -13,16 +13,16 @@ function initializeJS() {
     });
   }
 
-  //Local <a href="#example"> Smooth  Scrolling
-  //   jQuery(document).localScroll();
-  //Closoe Nav on click
+  // Local <a href="#example"> Smooth  Scrolling
+  // jQuery(document).localScroll();
+  // Close Nav on click
   jQuery(document).on("click", ".navbar-collapse.in", function (e) {
     if (jQuery(e.target).is("a")) {
       jQuery(this).removeClass("in").addClass("collapse");
     }
   });
 
-  //Hero
+  // Hero
   (function () {
     function heroInit() {
       var hero = jQuery(".hero"),
@@ -229,31 +229,4 @@ jQuery(window).load(function () {
 
 jQuery(document).ready(function () {
   initializeJS();
-  jQuery(".corner").click(function () {
-    jQuery("#theme-options").slideToggle();
-  });
-
-  jQuery("#parallax-no").click(function () {
-    jQuery(".parallax").each(function () {
-      jQuery(this).addClass("no-parallax");
-    });
-
-    return false;
-  });
-
-  jQuery("#parallax-yes").click(function () {
-    jQuery(".parallax").each(function () {
-      jQuery(this).removeClass("parallax");
-    });
-
-    return false;
-  });
-
-  jQuery("#icon-no").click(function () {
-    jQuery(".navbar-nav i.glyphicon").hide();
-  });
-
-  jQuery("#icon-yes").click(function () {
-    jQuery(".navbar-nav i.glyphicon").show();
-  });
 });
